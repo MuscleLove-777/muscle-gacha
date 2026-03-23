@@ -41,6 +41,7 @@ const slotReel = document.getElementById('slot-reel');
 const gachaBtn = document.getElementById('gacha-btn');
 const shareBtn = document.getElementById('share-btn');
 const pullCountEl = document.getElementById('pull-count');
+const pullCountEnEl = document.getElementById('pull-count-en');
 const resultArea = document.getElementById('result-area');
 const resultImage = document.getElementById('result-image');
 const resultImageWrapper = document.getElementById('result-image-wrapper');
@@ -179,10 +180,10 @@ function triggerScreenFlash() {
     screenFlash.classList.add('active');
 }
 
-function showDramaticText(text) {
+function showDramaticText(text, textEn) {
     const el = document.createElement('div');
     el.className = 'ssr-dramatic';
-    el.textContent = text;
+    el.innerHTML = text + (textEn ? '<span class="ssr-dramatic-en">' + textEn + '</span>' : '');
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 1500);
 }
@@ -291,7 +292,7 @@ function showResult(item) {
     // Effects based on rarity
     if (item.rarity === 'SSR') {
         triggerScreenFlash();
-        showDramaticText('SSR出た！');
+        showDramaticText('SSR出た！', 'SSR GET!');
         launchConfetti();
         createSparkles(30);
     } else if (item.rarity === 'SR') {
@@ -350,6 +351,11 @@ function updateCollection() {
         text.textContent = 'Patreonで\n限定解放！';
         div.appendChild(text);
 
+        const textEn = document.createElement('span');
+        textEn.className = 'lock-text-en';
+        textEn.textContent = 'Unlock on\nPatreon!';
+        div.appendChild(textEn);
+
         collectionGrid.appendChild(div);
     });
 }
@@ -367,7 +373,7 @@ function saveState() {
 function shareResult(item) {
     const rarityEmoji = { SSR: '🌈', SR: '✨', R: '🔷', N: '▫️' };
     const emoji = rarityEmoji[item.rarity] || '';
-    const text = `【筋肉ガチャ】${item.rarity}${emoji}キタ！💪 ${pullCount}回目で${item.rarity}引いた！\nコレクション：${collection.size}/13\n#MuscleLove #筋肉ガチャ`;
+    const text = `【筋肉ガチャ / Muscle Gacha】${item.rarity}${emoji}キタ！💪 ${pullCount}回目で${item.rarity}引いた！\nGot ${item.rarity} on Pull #${pullCount}!\nコレクション / Collection：${collection.size}/13\n#MuscleLove #筋肉ガチャ #MuscleGacha`;
     const url = encodeURIComponent(text);
     window.open(`https://twitter.com/intent/tweet?text=${url}`, '_blank');
 }
@@ -392,6 +398,7 @@ async function pullGacha() {
 
     pullCount++;
     pullCountEl.textContent = pullCount;
+    pullCountEnEl.textContent = pullCount;
 
     // Animate
     await spinAnimation(item);
@@ -416,6 +423,7 @@ shareBtn.addEventListener('click', () => {
 
 // ========== INIT ==========
 pullCountEl.textContent = pullCount;
+pullCountEnEl.textContent = pullCount;
 updateCollection();
 
 // Preload images

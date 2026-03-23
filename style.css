@@ -98,6 +98,14 @@ body {
     text-shadow: 0 0 10px rgba(180, 77, 255, 0.5);
 }
 
+.subtitle-en {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    letter-spacing: 3px;
+    margin-top: 4px;
+    opacity: 0.7;
+}
+
 /* ========== Pull Counter ========== */
 .pull-counter {
     text-align: center;
@@ -106,10 +114,24 @@ body {
     margin: 12px 0;
 }
 
-.pull-counter span {
+.pull-counter span#pull-count {
     color: var(--neon-cyan);
     font-weight: bold;
     font-size: 1.3rem;
+}
+
+.pull-counter-en {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+.pull-counter-en span {
+    color: var(--neon-cyan);
+    font-weight: bold;
+    font-size: 0.85rem;
 }
 
 /* ========== Gacha Machine ========== */
@@ -394,6 +416,12 @@ body {
     font-size: 1.6rem;
 }
 
+.btn-text-en {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    font-weight: 700;
+}
+
 .share-btn {
     display: flex;
     align-items: center;
@@ -418,6 +446,12 @@ body {
     border-color: #555;
 }
 
+.share-btn-en {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
 /* ========== Collection ========== */
 .collection-section {
     margin: 32px 0 24px;
@@ -434,6 +468,13 @@ body {
 
 .section-title span {
     color: var(--neon-pink);
+}
+
+.section-title-en {
+    font-size: 0.85rem;
+    color: var(--text-secondary) !important;
+    opacity: 0.7;
+    font-weight: 500;
 }
 
 .collection-grid {
@@ -481,6 +522,16 @@ body {
     text-align: center;
     line-height: 1.3;
     font-weight: 700;
+}
+
+.collection-item.locked .lock-text-en {
+    font-size: 0.4rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 2px;
+    opacity: 0.7;
 }
 
 .collection-item.unlocked {
@@ -565,10 +616,30 @@ body {
     transform: scale(0.95);
 }
 
+.cta-text-en {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+
+.patreon-btn-en {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
 .cta-sub {
     margin-top: 12px;
     font-size: 0.8rem;
     color: var(--text-secondary);
+}
+
+.cta-sub-en {
+    margin-top: 4px;
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
 }
 
 /* ========== Footer ========== */
@@ -613,6 +684,15 @@ body {
     white-space: nowrap;
 }
 
+.ssr-dramatic-en {
+    display: block;
+    font-size: 1.4rem;
+    color: rgba(255, 215, 0, 0.7);
+    letter-spacing: 3px;
+    margin-top: 4px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
 @keyframes dramaticReveal {
     0% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
     20% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
@@ -625,9 +705,12 @@ body {
     .container { padding: 12px; }
     .logo { font-size: 2rem; }
     .subtitle { font-size: 0.9rem; letter-spacing: 8px; }
+    .subtitle-en { font-size: 0.65rem; }
     .gacha-btn { font-size: 1.2rem; padding: 14px 24px; }
+    .btn-text-en { font-size: 0.7rem; }
     .machine-frame { width: 240px; }
     .slot-reel img { width: 170px; height: 200px; }
     .slot-window { height: 200px; }
     .collection-grid { grid-template-columns: repeat(3, 1fr); }
+    .ssr-dramatic-en { font-size: 1rem; }
 }

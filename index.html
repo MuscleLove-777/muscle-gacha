@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>筋肉ガチャ | MuscleLove</title>
+    <title>筋肉ガチャ | Muscle Gacha | MuscleLove</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="筋肉ガチャで最強の筋肉美女をゲットしよう！SSRを引けるか!? #MuscleLove">
-    <meta property="og:title" content="筋肉ガチャ | MuscleLove">
+    <meta name="description" content="筋肉ガチャで最強の筋肉美女をゲットしよう！SSRを引けるか!? Pull the Muscle Gacha and get the strongest muscle beauty! #MuscleLove">
+    <meta property="og:title" content="筋肉ガチャ | Muscle Gacha | MuscleLove">
     <meta property="og:description" content="筋肉ガチャで最強の筋肉美女をゲットしよう！SSRを引けるか!?">
     <meta property="og:type" content="website">
 </head>
@@ -24,11 +24,13 @@
                 <span class="logo-muscle">Muscle</span><span class="logo-love">Love</span>
             </h1>
             <p class="subtitle">筋 肉 ガ チ ャ</p>
+            <p class="subtitle-en">Muscle Gacha</p>
         </header>
 
         <!-- Pull Counter -->
         <div class="pull-counter">
             <span id="pull-count">0</span>回目のガチャ
+            <span class="pull-counter-en">Pull #<span id="pull-count-en">0</span></span>
         </div>
 
         <!-- Gacha Machine -->
@@ -58,27 +60,29 @@
         <!-- Gacha Button -->
         <button class="gacha-btn" id="gacha-btn">
             <span class="btn-icon">🎰</span>
-            <span class="btn-text">ガチャを引く！</span>
+            <span class="btn-text">ガチャを引く！<span class="btn-text-en"> / Pull Gacha!</span></span>
         </button>
 
         <!-- Share Button -->
         <button class="share-btn" id="share-btn" style="display:none;">
-            <span>𝕏 でシェア</span>
+            <span>𝕏 でシェア <span class="share-btn-en">/ Share on 𝕏</span></span>
         </button>
 
         <!-- Collection -->
         <div class="collection-section">
-            <h2 class="section-title">コレクション <span id="collection-count">0</span>/13</h2>
+            <h2 class="section-title">コレクション <span class="section-title-en">/ Collection</span> <span id="collection-count">0</span>/13</h2>
             <div class="collection-grid" id="collection-grid"></div>
         </div>
 
         <!-- Patreon CTA -->
         <div class="patreon-cta">
             <p class="cta-text">🔥 限定コンテンツを解放しよう！</p>
+            <p class="cta-text-en">Unlock exclusive content!</p>
             <a href="https://www.patreon.com/cw/MuscleLove" target="_blank" rel="noopener noreferrer" class="patreon-btn">
-                <span>Patreonで応援する 💪</span>
+                <span>Patreonで応援する 💪<span class="patreon-btn-en"><br>Support on Patreon</span></span>
             </a>
             <p class="cta-sub">Patreon限定の激レア筋肉美女が待ってるぞ！</p>
+            <p class="cta-sub-en">Ultra-rare muscle beauties await on Patreon!</p>
         </div>
 
         <!-- Footer -->
