@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>筋肉ガチャ | MuscleLove</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="筋肉ガチャで最強の筋肉美女をゲットしよう！SSRを引けるか!? #MuscleLove">
+    <meta property="og:title" content="筋肉ガチャ | MuscleLove">
+    <meta property="og:description" content="筋肉ガチャで最強の筋肉美女をゲットしよう！SSRを引けるか!?">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Screen Flash Overlay -->
+    <div id="screen-flash" class="screen-flash"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">
+                <span class="logo-muscle">Muscle</span><span class="logo-love">Love</span>
+            </h1>
+            <p class="subtitle">筋 肉 ガ チ ャ</p>
+        </header>
+
+        <!-- Pull Counter -->
+        <div class="pull-counter">
+            <span id="pull-count">0</span>回目のガチャ
+        </div>
+
+        <!-- Gacha Machine -->
+        <div class="gacha-machine">
+            <div class="machine-frame">
+                <div class="rarity-label" id="rarity-label"></div>
+                <div class="slot-window">
+                    <div class="slot-reel" id="slot-reel"></div>
+                </div>
+                <div class="machine-base"></div>
+            </div>
+        </div>
+
+        <!-- Result Area -->
+        <div class="result-area" id="result-area" style="display:none;">
+            <div class="result-card" id="result-card">
+                <div class="result-image-wrapper" id="result-image-wrapper">
+                    <img id="result-image" src="" alt="ガチャ結果">
+                </div>
+                <div class="result-info">
+                    <span class="result-rarity" id="result-rarity"></span>
+                    <span class="result-name" id="result-name"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gacha Button -->
+        <button class="gacha-btn" id="gacha-btn">
+            <span class="btn-icon">🎰</span>
+            <span class="btn-text">ガチャを引く！</span>
+        </button>
+
+        <!-- Share Button -->
+        <button class="share-btn" id="share-btn" style="display:none;">
+            <span>𝕏 でシェア</span>
+        </button>
+
+        <!-- Collection -->
+        <div class="collection-section">
+            <h2 class="section-title">コレクション <span id="collection-count">0</span>/13</h2>
+            <div class="collection-grid" id="collection-grid"></div>
+        </div>
+
+        <!-- Patreon CTA -->
+        <div class="patreon-cta">
+            <p class="cta-text">🔥 限定コンテンツを解放しよう！</p>
+            <a href="https://www.patreon.com/cw/MuscleLove" target="_blank" rel="noopener noreferrer" class="patreon-btn">
+                <span>Patreonで応援する 💪</span>
+            </a>
+            <p class="cta-sub">Patreon限定の激レア筋肉美女が待ってるぞ！</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; MuscleLove All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
